@@ -3,7 +3,7 @@ const APIURL= "https://cataas.com/cat"
 function generateCat() {
     const catImgContainer = document.getElementById('Catimg');
 
-    // Fetch a new cat image from the API
+
     fetch('https://cataas.com/cat')
         .then(response => {
             if (!response.ok) {
@@ -12,7 +12,7 @@ function generateCat() {
             return response.url;
         })
         .then(catImageUrl => {
-            // Display the fetched cat image
+
             catImgContainer.innerHTML = `<img src="${catImageUrl}" alt="Cat Image">`;
         })
         .catch(error => {
@@ -20,7 +20,7 @@ function generateCat() {
         });
 }
 
-// Add click event listener to the "Generate new Cat" button
+
 document.getElementById('Rbtn').addEventListener('click', generateCuteat);
 
 
@@ -29,7 +29,7 @@ const FatURL= "https://cataas.com/cat/fat"
 function generateCuteat() {
     const catImgContainer = document.getElementById('Catimg');
 
-    // Fetch a new cat image from the API
+
     fetch('https://cataas.com/cat/cute')
         .then(response => {
             if (!response.ok) {
@@ -38,7 +38,7 @@ function generateCuteat() {
             return response.url;
         })
         .then(catImageUrl => {
-            // Display the fetched cat image
+
             catImgContainer.innerHTML = `<img src="${catImageUrl}" alt="Cat Image">`;
         })
         .catch(error => {
@@ -46,5 +46,5 @@ function generateCuteat() {
         });
 }
 
-// Add click event listener to the "Generate new Cat" button
+
 document.getElementById('Fbtn').addEventListener('click', generateCuteat);
